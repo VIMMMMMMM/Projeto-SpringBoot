@@ -1,6 +1,5 @@
 package com.primeiroprojeto.curso.resources;
 
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.primeiroprojeto.curso.entities.User;
 import com.primeiroprojeto.curso.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,8 +14,10 @@ import java.util.List;
 @RestController
 @RequestMapping(value = "/users")
 public class UserResource {
+
     @Autowired
     private UserService service;
+
     @GetMapping
     public ResponseEntity<List<User>> findAll() {
         List<User>list=service.findAll();
