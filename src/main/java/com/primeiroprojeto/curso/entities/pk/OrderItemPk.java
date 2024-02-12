@@ -19,7 +19,7 @@ public class OrderItemPk implements Serializable {
     @JoinColumn(name = "product_id")
     private Product product;
 
-    @JsonIgnore
+
     public Order getOrder() {
         return order;
     }
